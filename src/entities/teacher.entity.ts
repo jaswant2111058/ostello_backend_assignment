@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column } from 'typeorm';
 
 @Entity()
-export class Teacher {
+export class Teachers {
   @PrimaryGeneratedColumn()
   id: number;
 
@@ -10,13 +10,4 @@ export class Teacher {
 
   @Column()
   subject: string;
-
-  @Column({ nullable: true })
-  email: string;
-
-  @Column({ nullable: true })
-  phone: string;
-
-  @Column({ nullable: true })
-  address: string;
 }

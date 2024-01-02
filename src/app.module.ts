@@ -7,7 +7,7 @@ import { TeachersController } from './controllers/teachers.controller';
 import { StudentsService } from './services/students.service';
 import { TeachersService } from './services/teachers.service';
 import { Student } from './entities/student.entity';
-import { Teacher } from './entities/teacher.entity';
+import { Teachers } from './entities/teacher.entity';
 
 @Module({
   imports: [
@@ -18,10 +18,10 @@ import { Teacher } from './entities/teacher.entity';
       username: 'postgresJassi',
       password: 'Jassi#2002',
       database: 'Jassidb',
-      entities: [Student, Teacher],
-      synchronize: true,
+      entities: [Student, Teachers],
+      synchronize: false, 
     }),
-    TypeOrmModule.forFeature([Student, Teacher]),
+    TypeOrmModule.forFeature([Student, Teachers]),
   ],
   controllers: [StudentsController, TeachersController],
   providers: [StudentsService, TeachersService],
