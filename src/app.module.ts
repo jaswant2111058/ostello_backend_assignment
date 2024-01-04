@@ -13,11 +13,11 @@ import { Teachers } from './entities/teacher.entity';
   imports: [
     TypeOrmModule.forRoot({
       type: 'postgres',
-      host: 'database-2.cjiaoqigi3o0.us-east-1.rds.amazonaws.com',
+      host: process.env.HOST,
       port: 5432,
       username: 'postgresJassi',
-      password: 'Jassi#2002',
-      database: 'Jassidb',
+      password: process.env.PASSWORD,
+      database: process.env.DBNAME,
       entities: [Student, Teachers],
       synchronize: false,
     }),
